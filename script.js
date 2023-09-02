@@ -62,3 +62,18 @@ function insertText(Text) {
     // Enfocar nuevamente el campo de entrada
     input.focus();
 }
+
+//-------------------------
+// Función para mover el cursor hacia adelante o hacia atrás en el input de texto
+function MoveCursor(direction) {
+    let input = document.getElementById("display");
+    let currentPosition = input.selectionStart;
+
+    if (direction === 'forward' && currentPosition < input.value.length) {
+        input.setSelectionRange(currentPosition + 1, currentPosition + 1);
+    } else if (direction === 'backward' && currentPosition > 0) {
+        input.setSelectionRange(currentPosition - 1, currentPosition - 1);
+    }
+    
+    input.focus();
+}
