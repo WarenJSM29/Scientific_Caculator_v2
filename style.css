@@ -127,3 +127,10 @@ body {
 .color2 {
     background-color: #198f2d;
 }
+
+.custom-input {
+    border: 1px solid #ccc;
+    padding: 5px;
+    cursor: text;
+    min-height: 1em;
+}  
