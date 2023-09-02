@@ -14,6 +14,8 @@ OthersOp:
 
 + X = Not Working.
 + Calc = Not Working.
++ ← (backward) = Working.
++ → (forward) = Working.
 + π (PI) = Working.
 + x³ = Working.
 + ab = Not Working.
