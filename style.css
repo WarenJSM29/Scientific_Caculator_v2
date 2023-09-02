@@ -57,6 +57,10 @@ body {
     margin: 0% 2.5% 0% 2.5%;
 }
 
+#display::placeholder {
+    color: black;
+}
+
 #functions {
     display: flex;
     justify-content: space-between;
