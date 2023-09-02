@@ -1,0 +1,121 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #212429;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: wheat;
+}
+
+.button {
+    background-color: #212429;
+    color: white;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#appBg {
+    background-color: #34383E;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    border: 0.01em double #777;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.7);
+    gap: 10px;
+}
+
+#authorVersion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#authorVersion p:nth-child(2) {
+    font-weight: 900;
+}
+
+#display {
+    width: 95%;
+    height: 50px;
+    background-color: aquamarine;
+    color: black;
+    display: flex;
+    font-size: 40px;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 0% 2.5% 0% 2.5%;
+}
+
+#functions {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 2.5% 2.5% 0% 2.5%;
+}
+
+#functions .btn_function {
+    width: 50px;
+    height: 25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#functions .btn_function:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3em 3em 5em 5em;
+    width: 70px;
+    height: 50px;
+}
+
+.btn_function {
+    display: flex;
+    flex-direction: column;
+}
+
+#othersOp {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    gap: 4px;
+    width: 95%;
+    margin: 2.5% 2.5% 0% 2.5%;
+}
+
+#othersOp input {
+    border-radius: 4px;
+}
+
+#numbers {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 4px;
+    width: 95%;
+    margin: 2.5% 2.5% 0% 2.5%;
+}
+
+#numbers input {
+    padding: 6px;
+    border-radius: 0.5em 0 0.5em 0;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.color {
+    background-color: red;
+}

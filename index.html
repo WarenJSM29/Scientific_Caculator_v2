@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific_Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="appBg">
+        <section id="authorVersion">
+            <p>Waren</p>
+            <p>Calculator</p>
+            <p>v1.1</p>
+        </section>
+
+        <form name="calculator" class="calculator">
+            <input id="display" type="textfield" name="ans" value="" autocomplete="off" readonly onkeyup="DeleteCharacter(event), evaluarExpresion()">
+
+            <section id="functions">
+                <input type="button" value="shift" class="btn_function button">
+                <input type="button" value="alpha" class="btn_function button">
+                <input type="button" value="Replay" class="btn_function button">
+                <input type="button" value="mode" class="btn_function button">
+                <input type="button" value="on" class="btn_function button">
+            </section>    
+
+            <section id="othersOp">
+                <input type="button" value="X" class="button">
+                <input type="button" value="Calc" class="button">
+                <input type="button" value="_" class="button hidden">
+                <input type="button" value="_" class="button hidden">
+                <input type="button" value="π" class="button" onclick="document.calculator.ans.value+='π'">
+                <input type="button" value="x³" class="button" onclick="document.calculator.ans.value+='**3'">
+
+                <input type="button" value="ab" class="button">
+                <input type="button" value="√" class="button">
+                <input type="button" value="x²" class="button" onclick="document.calculator.ans.value+='**2'">
+                <input type="button" value="^" class="button" onclick="document.calculator.ans.value+='**'">
+                <input type="button" value="log" class="button">
+                <input type="button" value="In" class="button">
+
+                <input type="button" value="(-)" class="button">
+                <input type="button" value=".,,," class="button">
+                <input type="button" value="hyp" class="button">
+                <input type="button" value="sin" class="button">
+                <input type="button" value="cos" class="button">
+                <input type="button" value="tan" class="button">
+
+                <input type="button" value="Rc1" class="button">
+                <input type="button" value="Eng" class="button">
+                <input type="button" value="(" class="button" onclick="document.calculator.ans.value+='('">
+                <input type="button" value=")" class="button" onclick="document.calculator.ans.value+=')'">
+                <input type="button" value="," class="button">
+                <input type="button" value="m+" class="button">
+            </section>
+
+            <section id="numbers">
+                <input type="button" value="7" class="button" onclick="document.calculator.ans.value+='7'">
+                <input type="button" value="8" class="button" onclick="document.calculator.ans.value+='8'">
+                <input type="button" value="9" class="button" onclick="document.calculator.ans.value+='9'">
+                <input type="button" value="DEL" class="button color" onclick="DeleteLastCharacter()">
+                <input type="reset" value="AC" class="button color">
+    
+                <input type="button" value="4" class="button" onclick="document.calculator.ans.value+='4'">
+                <input type="button" value="5" class="button" onclick="document.calculator.ans.value+='5'">
+                <input type="button" value="6" class="button" onclick="document.calculator.ans.value+='6'">
+                <input type="button" value="x" class="button" onclick="document.calculator.ans.value+='*'">
+                <input type="button" value="÷" class="button" onclick="document.calculator.ans.value+='/'">
+    
+                <input type="button" value="1" class="button" onclick="document.calculator.ans.value+='1'">
+                <input type="button" value="2" class="button" onclick="document.calculator.ans.value+='2'">
+                <input type="button" value="3" class="button" onclick="document.calculator.ans.value+='3'">
+                <input type="button" value="+" class="button" onclick="document.calculator.ans.value+='+'">
+                <input type="button" value="-" class="button" onclick="document.calculator.ans.value+='-'">
+    
+                <input type="button" value="0" class="button" onclick="document.calculator.ans.value+='0'">
+                <input type="button" value="." class="button" onclick="document.calculator.ans.value+='.'">
+                <input type="button" value="EXP" class="button">
+                <input type="button" value="Ans" class="button">
+                <input type="button" value="=" class="button" onclick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+            </section>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
