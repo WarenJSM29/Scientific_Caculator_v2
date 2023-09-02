@@ -20,7 +20,9 @@
             <section id="functions">
                 <input type="button" value="shift" class="btn_function button">
                 <input type="button" value="alpha" class="btn_function button">
-                <input type="button" value="Replay" class="btn_function button">
+                <input type="button" value="←" class="btn_function button color2" onclick="MoveCursor('backward')">
+                <input type="button" value="Menu" class="btn_function button">
+                <input type="button" value="→" class="btn_function button color2" onclick="MoveCursor('forward')">
                 <input type="button" value="mode" class="btn_function button">
                 <input type="button" value="on" class="btn_function button">
             </section>    
@@ -28,8 +30,8 @@
             <section id="othersOp">
                 <input type="button" value="X" class="button">
                 <input type="button" value="Calc" class="button">
-                <input type="button" value="←" class="button color2" onclick="MoveCursor('backward')">
-                <input type="button" value="→" class="button color2" onclick="MoveCursor('forward')">
+                <input type="button" value="_" class="button hidden">
+                <input type="button" value="_" class="button hidden">
                 <input type="button" value="π" class="button" onclick="insertText('π')">
                 <input type="button" value="x³" class="button" onclick="insertText('**3')">
 
@@ -59,7 +61,7 @@
                 <input type="button" value="7" class="button" onclick="insertText('7')">
                 <input type="button" value="8" class="button" onclick="insertText('8')">
                 <input type="button" value="9" class="button" onclick="insertText('9')">
-                <input type="button" value="DEL" class="button color" onclick="DeleteCharacterButton()">
+                <input type="button" value="DEL" id="Delete" class="button color">
                 <input type="reset" value="AC" class="button color">
     
                 <input type="button" value="4" class="button" onclick="insertText('4')">

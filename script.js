@@ -1,20 +1,33 @@
-// Función para eliminar el último carácter del input de texto
-function DeleteCharacter(event) {
-    let input = document.getElementById("display");
-    
-    // Verifica si se presionó la tecla Backspace (código de tecla 8)
-    if (event.keyCode === 8) {
-        let actualValue = input.value;
-        input.value = actualValue.slice(0, -1); // Elimina el último carácter
-    }
-}
+// Obtén los elementos por su ID
+        let input = document.getElementById('display');
+        let del = document.getElementById('Delete');
 
-// Función para eliminar el último carácter del input de texto al hacer clic en el botón "Eliminar"
-function DeleteCharacterButton() {
-    let input = document.getElementById("display");
-    let actualValue = input.value;
-    input.value = actualValue.slice(0, -1); // Elimina el último carácter
-}
+        // Agrega un evento al botón para eliminar el último carácter
+        del.addEventListener('click', function() {
+            let inputValue = input.value;
+            
+            // Verifica si el campo de entrada tiene algún valor
+            if (inputValue.length > 0) {
+                // Elimina el último carácter del valor del campo de entrada
+                input.value = inputValue.slice(0, -1);
+            }
+        });
+
+        // Agrega un evento para detectar la tecla "Backspace"
+        input.addEventListener('keydown', function(event) {
+            // Verifica si la tecla presionada es la tecla "Backspace" (código 8)
+            if (event.keyCode === 8) {
+                event.preventDefault(); // Evita que el navegador retroceda en la historia
+                let inputValue = input.value;
+                
+                // Verifica si el campo de entrada tiene algún valor
+                if (inputValue.length > 0) {
+                    // Elimina el último carácter del valor del campo de entrada
+                    input.value = inputValue.slice(0, -1);
+                }
+            }
+        });
+//---------------------------
 
 //Valor PI
 function PIValue() {
