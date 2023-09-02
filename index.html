@@ -15,7 +15,7 @@
         </section>
 
         <form name="calculator" class="calculator">
-            <input id="display" type="textfield" name="ans" value="" autocomplete="off" readonly onkeyup="DeleteCharacter(event), evaluarExpresion()">
+            <input id="display" type="textfield" name="ans" value="0" autocomplete="off" onkeyup="DeleteCharacter(event), evaluarExpresion()">
 
             <section id="functions">
                 <input type="button" value="shift" class="btn_function button">
@@ -30,52 +30,52 @@
                 <input type="button" value="Calc" class="button">
                 <input type="button" value="_" class="button hidden">
                 <input type="button" value="_" class="button hidden">
-                <input type="button" value="π" class="button" onclick="document.calculator.ans.value+='π'">
-                <input type="button" value="x³" class="button" onclick="document.calculator.ans.value+='**3'">
+                <input type="button" value="π" class="button" onclick="insertText('π')">
+                <input type="button" value="x³" class="button" onclick="insertText('**3')">
 
                 <input type="button" value="ab" class="button">
-                <input type="button" value="√" class="button">
-                <input type="button" value="x²" class="button" onclick="document.calculator.ans.value+='**2'">
-                <input type="button" value="^" class="button" onclick="document.calculator.ans.value+='**'">
+                <input type="button" value="√" class="button" onclick="insertText('sqrt()')">
+                <input type="button" value="x²" class="button" onclick="insertText('**2')">
+                <input type="button" value="^" class="button" onclick="insertText('**')">
                 <input type="button" value="log" class="button">
                 <input type="button" value="In" class="button">
 
-                <input type="button" value="(-)" class="button">
+                <input type="button" value="(a/b)" class="button" onclick="insertText('(a/b)')">
                 <input type="button" value=".,,," class="button">
                 <input type="button" value="hyp" class="button">
-                <input type="button" value="sin" class="button">
-                <input type="button" value="cos" class="button">
-                <input type="button" value="tan" class="button">
+                <input type="button" value="sin" class="button" onclick="insertText('sin()')">
+                <input type="button" value="cos" class="button" onclick="insertText('cos()')">
+                <input type="button" value="tan" class="button" onclick="insertText('tan()')">
 
                 <input type="button" value="Rc1" class="button">
                 <input type="button" value="Eng" class="button">
-                <input type="button" value="(" class="button" onclick="document.calculator.ans.value+='('">
-                <input type="button" value=")" class="button" onclick="document.calculator.ans.value+=')'">
-                <input type="button" value="," class="button">
+                <input type="button" value="(" class="button" onclick="insertText('(')">
+                <input type="button" value=")" class="button" onclick="insertText(')')">
+                <input type="button" value="," class="button" onclick="insertText(',')">
                 <input type="button" value="m+" class="button">
             </section>
 
             <section id="numbers">
-                <input type="button" value="7" class="button" onclick="document.calculator.ans.value+='7'">
-                <input type="button" value="8" class="button" onclick="document.calculator.ans.value+='8'">
-                <input type="button" value="9" class="button" onclick="document.calculator.ans.value+='9'">
-                <input type="button" value="DEL" class="button color" onclick="DeleteLastCharacter()">
+                <input type="button" value="7" class="button" onclick="insertText('7')">
+                <input type="button" value="8" class="button" onclick="insertText('8')">
+                <input type="button" value="9" class="button" onclick="insertText('9')">
+                <input type="button" value="DEL" class="button color" onclick="DeleteCharacterButton()">
                 <input type="reset" value="AC" class="button color">
     
-                <input type="button" value="4" class="button" onclick="document.calculator.ans.value+='4'">
-                <input type="button" value="5" class="button" onclick="document.calculator.ans.value+='5'">
-                <input type="button" value="6" class="button" onclick="document.calculator.ans.value+='6'">
-                <input type="button" value="x" class="button" onclick="document.calculator.ans.value+='*'">
-                <input type="button" value="÷" class="button" onclick="document.calculator.ans.value+='/'">
+                <input type="button" value="4" class="button" onclick="insertText('4')">
+                <input type="button" value="5" class="button" onclick="insertText('5')">
+                <input type="button" value="6" class="button" onclick="insertText('6')">
+                <input type="button" value="x" class="button" onclick="insertText('*')">
+                <input type="button" value="÷" class="button" onclick="insertText('/')">
     
-                <input type="button" value="1" class="button" onclick="document.calculator.ans.value+='1'">
-                <input type="button" value="2" class="button" onclick="document.calculator.ans.value+='2'">
-                <input type="button" value="3" class="button" onclick="document.calculator.ans.value+='3'">
-                <input type="button" value="+" class="button" onclick="document.calculator.ans.value+='+'">
-                <input type="button" value="-" class="button" onclick="document.calculator.ans.value+='-'">
+                <input type="button" value="1" class="button" onclick="insertText('1')">
+                <input type="button" value="2" class="button" onclick="insertText('2')">
+                <input type="button" value="3" class="button" onclick="insertText('3')">
+                <input type="button" value="+" class="button" onclick="insertText('+')">
+                <input type="button" value="-" class="button" onclick="insertText('-')">
     
-                <input type="button" value="0" class="button" onclick="document.calculator.ans.value+='0'">
-                <input type="button" value="." class="button" onclick="document.calculator.ans.value+='.'">
+                <input type="button" value="0" class="button" onclick="insertText('0')">
+                <input type="button" value="." class="button" onclick="insertText('.')">
                 <input type="button" value="EXP" class="button">
                 <input type="button" value="Ans" class="button">
                 <input type="button" value="=" class="button" onclick="document.calculator.ans.value=eval(document.calculator.ans.value)">
