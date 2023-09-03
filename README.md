@@ -6,8 +6,8 @@ Functions:
 
 + shitf = Not Working.
 + alpha = Not Working.
-+ Replay = Not Working.
-+ mode = Not Working.
++ Menu = Not Working.
++ Deg & Rad = Working.
 + on = Not Working.
 
 OthersOp:
@@ -22,8 +22,8 @@ OthersOp:
 + √ (sqrt) = Working.
 + x² = Working.
 + ^ = Working.
-+ log = Not Working.
-+ In = Not Working.
++ log = Working.
++ In = Working.
 + (a/b) = Working.
 + .,,, = Not Working.
 + hyp = Not Working.

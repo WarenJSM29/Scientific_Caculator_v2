@@ -11,7 +11,7 @@
         <section id="authorVersion">
             <p>Waren</p>
             <p>Calculator</p>
-            <p>v1.1</p>
+            <p>v1.2</p>
         </section>
 
         <form name="calculator" class="calculator">
@@ -23,7 +23,7 @@
                 <input type="button" value="←" class="btn_function button color2" onclick="MoveCursor('backward')">
                 <input type="button" value="Menu" class="btn_function button">
                 <input type="button" value="→" class="btn_function button color2" onclick="MoveCursor('forward')">
-                <input type="button" value="mode" class="btn_function button">
+                <input type="button" value="Rad" class="btn_function button" id="botonCambiarModo">
                 <input type="button" value="on" class="btn_function button">
             </section>    
 
@@ -39,8 +39,8 @@
                 <input type="button" value="√" class="button" onclick="insertText('sqrt()')">
                 <input type="button" value="x²" class="button" onclick="insertText('**2')">
                 <input type="button" value="^" class="button" onclick="insertText('**')">
-                <input type="button" value="log" class="button">
-                <input type="button" value="In" class="button">
+                <input type="button" value="log" class="button" onclick="insertText('log()')">
+                <input type="button" value="ln" class="button" onclick="insertText('ln()')">
 
                 <input type="button" value="(a/b)" class="button" onclick="insertText('(a/b)')">
                 <input type="button" value=".,,," class="button">
